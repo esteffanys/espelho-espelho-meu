@@ -1,0 +1,7 @@
+{
+  "name": "espelho-espelho-meu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
