@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CameraPreview } from '@capacitor-community/camera-preview';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() {
+    CameraPreview.start({ parent: "cameraPreview"});
+  }
 
 }
