@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CameraPreview } from '@capacitor-community/camera-preview';
+import { CameraPreview, CameraPreviewOptions } from '@capacitor-community/camera-preview';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,14 @@ import { CameraPreview } from '@capacitor-community/camera-preview';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  cameraPreviewOptions: CameraPreviewOptions = {
+    position: 'front',
+    enableZoom: true
 
+  };
   constructor() {
-    CameraPreview.start({ parent: "cameraPreview"});
-  }
+     CameraPreview.start(this.cameraPreviewOptions);
+    }
 
 }
+
